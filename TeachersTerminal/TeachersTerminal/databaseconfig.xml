@@ -1,0 +1,7 @@
+﻿<?xml version="1.0"?>
+<database>
+	<connectionString>
+		<Server>Computer_Name</Server>
+		<Database>Database_Name<Database>
+	</connectionString>
+</database>

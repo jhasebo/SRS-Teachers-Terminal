@@ -1,0 +1,19 @@
+﻿<Controls:MetroWindow x:Class="dialogFacultyConcerns"
+    xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    ResizeMode="NoResize"
+    ShowMinButton="False"
+    ShowMaxRestoreButton="false" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignHeight="311" d:DesignWidth="572" SizeToContent="WidthAndHeight" Title="Faculty Concerns" Icon="/TeachersTerminal;component/Images/books-icon.png" Name="dialogFacultyConcerns">
+    <Grid Height="265" Width="536">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="66*" />
+            <RowDefinition Height="188*" />
+        </Grid.RowDefinitions>
+        <TextBox Height="199" HorizontalAlignment="Left" Margin="12,12,0,0" Name="tbConcerns" VerticalAlignment="Top" Width="505" Controls:TextboxHelper.Watermark="Up to 200 Characters only..." Grid.RowSpan="2" TextWrapping="Wrap" />
+        <Button Content="Submit" Height="23" HorizontalAlignment="Left" Margin="361,151,0,0" Name="btnSubmit" VerticalAlignment="Top" Width="75" Grid.Row="1" />
+        <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="442,151,0,0" Name="btnCancel" VerticalAlignment="Top" Width="75" Grid.Row="1" />
+        <Label Content="Character Counter:" Height="28" HorizontalAlignment="Left" Margin="12,151,0,0" Name="Label1" VerticalAlignment="Top" Grid.Row="1" />
+        <Label Content="200" Height="28" HorizontalAlignment="Left" Margin="127,151,0,0" Name="lblNumChars" VerticalAlignment="Top" Grid.Row="1" />
+    </Grid>
+</Controls:MetroWindow>

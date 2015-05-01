@@ -1,0 +1,540 @@
+﻿<Controls:MetroWindow x:Class="MainWindow"
+    xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    ResizeMode="NoResize"
+    ShowMinButton="False"
+    ShowMaxRestoreButton="false"
+    Title="Teacher's Terminal" Height="577" Width="949" Name="Main" Icon="/TeachersTerminal;component/Images/Bejeweled.ico" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignWidth="880" WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow">
+    <Controls:MetroWindow.WindowCommands>
+        <Controls:WindowCommands>
+            <Button Name="btnSettings" Content="settings"/>
+            <!--TextBox Height="23" HorizontalAlignment="Right" Margin="10,2,0,0" Name="Search" VerticalAlignment="Top" Width="181" Controls:TextboxHelper.ClearTextButton="True" Controls:TextboxHelper.Watermark="Search" /-->
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.WindowCommands>
+    <Controls:MetroContentControl>
+        <Grid>
+            <Grid Name="gridMenu" Background="#11000000" HorizontalAlignment="Left" Width="207">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="18*" />
+                    <RowDefinition Height="800*" />
+                </Grid.RowDefinitions>
+                <StackPanel Height="167" HorizontalAlignment="Left" Margin="22,41,0,0" Name="StackPanel1" VerticalAlignment="Top" Width="171" Grid.Row="1">
+                    <Button Height="41" Name="btnUser" BorderBrush="{x:Null}" Background="{x:Null}">
+                        <DockPanel OverridesDefaultStyle="True" Height="32" Width="145">
+                            <Image Source="/TeachersTerminal;component/Images/User%20Accounts%20alt.ico" Height="25" Width="27" />
+                            <TextBlock Text="Profile" TextAlignment="Left" Width="80" Padding="15,7,0,0" FontSize="12" FontWeight="SemiBold" />
+<Canvas/>
+                        </DockPanel>
+
+                        <Button.Triggers>
+                            <EventTrigger RoutedEvent="Button.Click">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="Clickable"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="gridClasses"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="gridStudentList"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="gridNotificationDetails"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="gridReport"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="gridNotify"
+                                            Storyboard.TargetProperty="(Grid.Width)"
+                                            From="0" To="0" Duration="0:0:0"
+                                         />
+                                        <DoubleAnimation BeginTime="0:0:0.2"
+                                        Storyboard.TargetName="gridUser"
+                                        Storyboard.TargetProperty="(Grid.Opacity)"
+                                        From="0" To="1" Duration="0:0:0.25"
+                                        />
+                                        <DoubleAnimation BeginTime="0:0:0.2"
+                                        Storyboard.TargetName="gridMenu"
+                                        Storyboard.TargetProperty="(Grid.Opacity)"
+                                        From="1" To="0.60" Duration="0:0:0.25"
+                                        />
+                                        <DoubleAnimation BeginTime="0:0:0.2"
+                                        Storyboard.TargetName="gridUser"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                            From="0" To="800" Duration="0:0:0.25"
+                                        />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Button.Triggers>
+                    </Button>
+                    <Button Height="41" Name="btnClass" BorderBrush="{x:Null}" Background="{x:Null}">
+                        <DockPanel OverridesDefaultStyle="True" Height="32" Width="145">
+                            <Image Source="/TeachersTerminal;component/Images/books-icon.png" Height="25" Width="27" />
+                            <TextBlock Text="Classes" TextAlignment="Left" Width="80" Padding="15,7,0,0" FontSize="12" FontWeight="SemiBold" />
+                            <Canvas/>
+                         </DockPanel>
+
+                        <Button.Triggers>
+                            <EventTrigger RoutedEvent="Button.Click">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="Clickable"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="gridUser"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="gridStudentList"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="gridNotificationDetails"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="gridReport"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="gridNotify"
+                                            Storyboard.TargetProperty="(Grid.Width)"
+                                            From="0" To="0" Duration="0:0:0"
+                                         />
+                                        <DoubleAnimation BeginTime="0:0:0.2"
+                                        Storyboard.TargetName="gridClasses"
+                                        Storyboard.TargetProperty="(Grid.Opacity)"
+                                        From="0" To="1" Duration="0:0:0.25"
+                                        />
+                                        <DoubleAnimation BeginTime="0:0:0.2"
+                                        Storyboard.TargetName="gridMenu"
+                                        Storyboard.TargetProperty="(Grid.Opacity)"
+                                        From="1" To="0.60" Duration="0:0:0.25"
+                                        />
+                                        <DoubleAnimation BeginTime="0:0:0.2"
+                                        Storyboard.TargetName="gridClasses"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                            From="0" To="800" Duration="0:0:0.25"
+                                        />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Button.Triggers>
+                    </Button>
+                    <Button Background="{x:Null}" BorderBrush="{x:Null}" Height="41" Name="btnReports">
+                        <DockPanel OverridesDefaultStyle="True" Height="32" Width="145">
+                            <Image Source="/TeachersTerminal;component/Images/Explorer-Metro.ico" Height="25" Width="27" />
+                            <TextBlock Text="Recents" TextAlignment="Left" Width="80" Padding="15,7,0,0" FontSize="12" FontWeight="SemiBold" />
+                            <Canvas/>
+                        </DockPanel>
+                        <Button.Triggers>
+                            <EventTrigger RoutedEvent="Button.Click">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="Clickable"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="gridUser"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="gridStudentList"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="gridNotificationDetails"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="gridClasses"
+                                            Storyboard.TargetProperty="(Grid.Width)"
+                                            From="0" To="0" Duration="0:0:0"
+                                         />
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="gridNotify"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation BeginTime="0:0:0.2"
+                                        Storyboard.TargetName="gridReport"
+                                        Storyboard.TargetProperty="(Grid.Opacity)"
+                                        From="0" To="1" Duration="0:0:0.25"
+                                        />
+                                        <DoubleAnimation BeginTime="0:0:0.2"
+                                        Storyboard.TargetName="gridMenu"
+                                        Storyboard.TargetProperty="(Grid.Opacity)"
+                                        From="1" To="0.60" Duration="0:0:0.25"
+                                        />
+                                        <DoubleAnimation BeginTime="0:0:0.2"
+                                        Storyboard.TargetName="gridReport"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                            From="0" To="800" Duration="0:0:0.25"
+                                        />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Button.Triggers>
+                    </Button>
+                    <Button Height="41" Name="btnNotifier" BorderBrush="{x:Null}" Background="{x:Null}">
+                        <DockPanel OverridesDefaultStyle="True" Height="32" Width="145">
+                            <Image Source="/TeachersTerminal;component/Images/Notifications.png" Height="25" Width="27" />
+                            <TextBlock Text="Notifications
+                                       " TextAlignment="Left" Width="88" Padding="15,7,0,0" FontSize="12" FontWeight="SemiBold" />
+                            <Canvas Name="cNotify" Visibility="Hidden">
+                                <TextBlock HorizontalAlignment="center" TextAlignment="center"  VerticalAlignment="Center" Name="tbDisplayNotifCtr" Text="0" Canvas.Top="3" Canvas.Left="3" Foreground="white" Background="#FFAF0000" Height="15" Width="16" />
+                            </Canvas>
+                         </DockPanel>
+                         <Button.Triggers>
+                            <EventTrigger RoutedEvent="Button.Click">
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="Clickable"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="gridUser"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="gridStudentList"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="gridNotificationDetails"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="gridClasses"
+                                            Storyboard.TargetProperty="(Grid.Width)"
+                                            From="0" To="0" Duration="0:0:0"
+                                         />
+                                        <DoubleAnimation 
+                                        Storyboard.TargetName="gridReport"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                        From="0" To="0" Duration="0:0:0"
+                                        />
+                                        <DoubleAnimation BeginTime="0:0:0.2"
+                                        Storyboard.TargetName="gridNotify"
+                                        Storyboard.TargetProperty="(Grid.Opacity)"
+                                        From="0" To="1" Duration="0:0:0.25"
+                                        />
+                                        <DoubleAnimation BeginTime="0:0:0.2"
+                                        Storyboard.TargetName="gridMenu"
+                                        Storyboard.TargetProperty="(Grid.Opacity)"
+                                        From="1" To="0.60" Duration="0:0:0.25"
+                                        />
+                                        <DoubleAnimation BeginTime="0:0:0.2"
+                                        Storyboard.TargetName="gridNotify"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                            From="0" To="800" Duration="0:0:0.25"
+                                        />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </Button.Triggers>
+                    </Button>                 
+                </StackPanel>
+            </Grid>
+            
+            <Grid Name="gridUser" Margin="208,0,0,0" Background="Gray" Visibility="Visible" Opacity="1" HorizontalAlignment="Left" Width="0">
+                <Button Width="55" Height="55" Style="{DynamicResource MetroCircleButtonStyle}" HorizontalAlignment="Left" Margin="25,16,0,0" VerticalAlignment="Top">
+                    <Image Source="/TeachersTerminal;component/Images/MB_0006_back.ico" Height="50" Width="53" />
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="Button.Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="gridMenu"
+                                        Storyboard.TargetProperty="(Grid.Opacity)"
+                                        From="0.6" To="1" Duration="0:0:0.25"
+                                        />
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="gridUser"
+                                        Storyboard.TargetProperty="(Grid.Opacity)"
+                                        From="1" To="0" Duration="0:0:0.10"
+                                        />
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="gridUser"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                            From="800" To="0" Duration="0:0:0.10"
+                                        />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Button.Triggers>
+                </Button>
+                <TextBlock Text="Profile" TextDecorations="Underline" Height="32" Margin="97,34,0,0" Name="Label1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="133" Foreground="#61F8F8F8" FontSize="15" FontWeight="SemiBold" />
+                <GroupBox Header="Photo"  Height="275" HorizontalAlignment="Left" Margin="52,90,0,0" Name="GroupBox2" VerticalAlignment="Top" Width="268">
+                    <Grid>
+                        <Button HorizontalAlignment="Left"  Name="btnPicture" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}">
+                        <DockPanel>
+                            <Image Name="imgProfile" Source="/TeachersTerminal;component/Images/User%20Accounts%20alt.ico" SnapsToDevicePixels="False" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Uniformtofill" />
+                        </DockPanel>
+                         </Button>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="Contact Information" Height="129" HorizontalAlignment="Left" Margin="51,376,0,0" Name="GroupBox4" VerticalAlignment="Top" Width="651">
+                    <Grid Height="95">
+                        <StackPanel Height="43" HorizontalAlignment="Left" Margin="28,6,0,0" Name="StackPanel2" VerticalAlignment="Top" Width="Auto" Orientation="Horizontal">
+                            <Label Content="Contact Number  :            " FontSize="13" FontWeight="SemiBold" Foreground="#FFF8F8F8" Height="28" Name="Label5" />
+                            <Label Foreground="White" Height="28" Name="lblContact" Width="Auto" MinWidth="40" />
+                            <TextBox Height="23" Name="tbUpdateContact" Width="0" Margin="10,0" />
+                            <Button Content="Update" Height="23" Name="btnUpdateContact" Width="62" />
+                            <Button Content="Set" Height="23" Name="setContact" Width="0" />
+                            <Button Content="Cancel" Height="23" Name="CancelC" Width="0" Margin="5,0,0,0" />
+                        </StackPanel>
+                        <StackPanel Height="43" HorizontalAlignment="Left" Margin="30,40,0,0" Name="StackPanel3" Orientation="Horizontal" VerticalAlignment="Top" Width="Auto">
+                            <Label Content="E-mail Address  :              " FontSize="13" FontWeight="SemiBold" Foreground="#FFF8F8F8" Height="28" Name="Label7" />
+                            <Label Foreground="White" Height="28" Name="lblEmail" Width="Auto" MinWidth="40" />
+                            <TextBox Height="23" Name="tbUpdateEmail" Width="0
+                             " Margin="10,0" IsUndoEnabled="False" />
+                            <Button Content="Update" Height="23" Name="btnUpdateEmail" Width="62" />
+                            <Button Content="Set" Height="23" Name="setEmail" Width="0" />
+                            <Button Content="Cancel" Height="23" Name="CancelE" Width="0" Margin="5,0,0,0" />
+                        </StackPanel>
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="Employee Number" Height="93" HorizontalAlignment="Left" Margin="338,93,0,0" Name="GroupBox5" VerticalAlignment="Top" Width="140">
+                    <Grid Background="#06FFFFFF">
+                        <Label Content="Label" Height="28" HorizontalAlignment="Left" Margin="12,13,0,0" Name="lblEmpNum" VerticalAlignment="Top" Foreground="White" FontSize="16" FontWeight="Medium" />
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="Employee Name" Height="78" Margin="336,199,0,0" Name="GroupBox6" VerticalAlignment="Top" HorizontalAlignment="Left" Width="366">
+                    <Grid Background="#06FFFFFF">
+                        
+                        <Label Content="Label" Width="320" Foreground="White" Height="28" HorizontalAlignment="Center" Margin="17,5,17,0" Name="lblName" VerticalAlignment="Top" FontSize="13" />
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="Designation" Height="89" HorizontalAlignment="Left" Margin="491,95,0,0" Name="GroupBox3" VerticalAlignment="Top" Width="206">
+                    <Grid Background="#06FFFFFF">
+                        <Label Content="Label" FontSize="16" FontWeight="Medium" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="10,10,0,0" Name="lblDesignation" VerticalAlignment="Top" />
+                    </Grid>
+                </GroupBox>
+                <GroupBox Header="Affiliation" Height="79" HorizontalAlignment="Left" Margin="335,284,0,0" Name="GroupBox7" VerticalAlignment="Top" Width="369">
+                    <Grid>
+                        <Label Content="Label" FontSize="13" Foreground="White" Height="28" HorizontalAlignment="Center" Margin="15,7,12,0" Name="lblaffiliation" VerticalAlignment="Top" Width="322" />
+                    </Grid>
+                </GroupBox>
+            </Grid>
+            
+            <Grid Name="gridClasses" Margin="208,0,0,0" Background="Gray" Visibility="Visible" Opacity="1" HorizontalAlignment="Left" Width="0">
+                <Button Height="55" HorizontalAlignment="Left" Margin="25,16,0,0" Style="{DynamicResource MetroCircleButtonStyle}" VerticalAlignment="Top" Width="55" Name="bbtnClasses">
+                    <Image Height="50" Source="/TeachersTerminal;component/Images/MB_0006_back.ico" Width="53" />
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="Button.Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="gridMenu"
+                                        Storyboard.TargetProperty="(Grid.Opacity)"
+                                        From="0.6" To="1" Duration="0:0:0.25"
+                                        />
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="gridClasses"
+                                        Storyboard.TargetProperty="(Grid.Opacity)"
+                                        From="1" To="0" Duration="0:0:0.10"
+                                        />
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="gridClasses"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                            From="800" To="0" Duration="0:0:0.10"
+                                        />
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="gridStudentList"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                            From="0" To="0" Duration="0:0:0"/>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Button.Triggers>
+                </Button>
+                <TextBlock FontSize="15" FontWeight="SemiBold" Foreground="#61F8F8F8" Height="32" HorizontalAlignment="Left" Margin="97,34,0,0" Name="TextBlock1" Text="Classes" TextDecorations="Underline" VerticalAlignment="Top" Width="133" />
+                <StackPanel Height="424" HorizontalAlignment="Left" Margin="32,89,0,0" Name="StackPanel4" VerticalAlignment="Top" Width="665">
+                    <Expander Name="expMW" Foreground="white" Header="Monday/Wednesday" Width="Auto">
+                        <Grid>
+                            <DataGrid Name="dgMonWed" SelectionMode="single" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" IsReadOnly="True"/>
+                        </Grid>
+                    </Expander>
+                    <Expander Name="expTTH" Header="Tuesday/Thursday" Foreground="white" Height="Auto">
+                        <Grid>
+                            <DataGrid Name="dgTueThu" SelectionMode="single" CanUserAddRows="False" CanUserDeleteRows="false" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" IsReadOnly="True"/>
+                        </Grid>
+                    </Expander>
+                    <Expander Header="Friday/Saturday" Height="Auto" Name="expFS" Foreground="white">
+                        <Grid>
+                            <DataGrid Name="dgFriSat" SelectionMode="single" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" CanUserDeleteRows="false" CanUserAddRows="false" IsReadOnly="True"/>
+                        </Grid>
+                    </Expander>
+                </StackPanel>
+            </Grid>
+
+            <Grid Name="gridReport" Margin="208,0,0,0" Background="Gray" Visibility="Visible" Opacity="1" HorizontalAlignment="Left" Width="0">
+                <Button Width="55" Height="55" Style="{DynamicResource MetroCircleButtonStyle}" HorizontalAlignment="Left" Margin="25,16,0,0" VerticalAlignment="Top">
+                    <Image Source="/TeachersTerminal;component/Images/MB_0006_back.ico" Height="50" Width="53" />
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="Button.Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="gridMenu"
+                                        Storyboard.TargetProperty="(Grid.Opacity)"
+                                        From="0.6" To="1" Duration="0:0:0.25"
+                                        />
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="gridReport"
+                                        Storyboard.TargetProperty="(Grid.Opacity)"
+                                        From="1" To="0" Duration="0:0:0.10"
+                                        />
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="gridReport"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                            From="800" To="0" Duration="0:0:0.10"
+                                        />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Button.Triggers>
+                </Button>
+                <TextBlock FontSize="15" FontWeight="SemiBold" Foreground="#61F8F8F8" Height="32" HorizontalAlignment="Left" Margin="97,34,0,0" Name="TextBlockReport" Text="Recents" TextDecorations="Underline" VerticalAlignment="Top" Width="133" />
+                <StackPanel Height="400" HorizontalAlignment="Left" Margin="53,95,0,0" Name="StackPanel5" VerticalAlignment="Top" Width="615">
+                    <Expander Header="Recent Absences" Height="Auto" Name="expActions" Foreground="white">
+                        <Grid>
+                            <DataGrid Name="dgActions" SelectionMode="single" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" CanUserDeleteRows="false" CanUserAddRows="false"/>
+                        </Grid>
+                    </Expander>
+                    <Expander Header="Recent Referrals" Height="Auto" Name="expReferrals" Foreground="white">
+                        <Grid>
+                            <DataGrid Name="dgReferrals" SelectionMode="single" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" CanUserDeleteRows="false" CanUserAddRows="false" IsReadOnly="True"/>
+                        </Grid>
+                    </Expander>
+                </StackPanel>
+            </Grid>
+
+            <Grid Name="gridNotify" Margin="208,0,0,0" Background="Gray" Visibility="Visible" Opacity="1" HorizontalAlignment="Left" Width="0">
+                <Button Width="55" Height="55" Style="{DynamicResource MetroCircleButtonStyle}" HorizontalAlignment="Left" Margin="25,16,0,0" VerticalAlignment="Top">
+                    <Image Source="/TeachersTerminal;component/Images/MB_0006_back.ico" Height="50" Width="53" />
+                    <Button.Triggers>
+                        <EventTrigger RoutedEvent="Button.Click">
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="gridMenu"
+                                        Storyboard.TargetProperty="(Grid.Opacity)"
+                                        From="0.6" To="1" Duration="0:0:0.25"
+                                        />
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="gridNotify"
+                                        Storyboard.TargetProperty="(Grid.Opacity)"
+                                        From="1" To="0" Duration="0:0:0.10"
+                                        />
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="gridNotify"
+                                        Storyboard.TargetProperty="(Grid.Width)"
+                                            From="800" To="0" Duration="0:0:0.10"
+                                        />
+                                 </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
+                    </Button.Triggers>
+                </Button>
+                <TextBlock Text="Notifications" TextDecorations="Underline" Height="32" Margin="97,34,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="133" Foreground="#61F8F8F8" FontSize="15" FontWeight="SemiBold" />
+                <DataGrid Height="407" HorizontalAlignment="Left" Margin="29,104,0,0" Name="dgNotifications" VerticalAlignment="Top" Width="660" CanUserAddRows="false" CanUserDeleteRows="false" CanUserReorderColumns="false" CanUserResizeColumns="false" CanUserResizeRows="false" CanUserSortColumns="false" Visibility="Hidden" SelectionMode="Single"/>
+                <TextBlock Height="23" HorizontalAlignment="Left" Margin="28,214,0,0" Name="tbNoNewNotif" Text="Nothing to load..." VerticalAlignment="Top" Width="663" TextAlignment="Center" FontSize="14" Foreground="White" />
+            </Grid>
+
+            <Grid Name="gridStudentList" Margin="0,0,-41,0" Visibility="Visible" Opacity="1" HorizontalAlignment="Right" Width="0" Background="#68000000">
+                <TextBox HorizontalAlignment="Right" Margin="0,32,78,0" Name="Search" Width="181" Controls:TextboxHelper.ClearTextButton="True" Controls:TextboxHelper.Watermark="Search" Height="26" VerticalAlignment="Top" />
+                <DatePicker Height="25" HorizontalAlignment="Left" Margin="49,75,0,0" Name="dpRefDate" VerticalAlignment="Top" Width="242" SelectedDateFormat="Long" />
+                <DataGrid Margin="45,117,80,32" Name="dgStudentList" CanUserAddRows="false" CanUserDeleteRows="false" CanUserReorderColumns="false" CanUserResizeColumns="false" CanUserResizeRows="false" CanUserSortColumns="false"/>
+
+                <Label Height="36" HorizontalAlignment="Left" Margin="49,15,0,0" Name="lblSubjSec" VerticalAlignment="Top" Width="308" Foreground="White" FontSize="18" FontWeight="SemiBold" Content="sample" />
+                <Label Content="Label" Height="28" HorizontalAlignment="Left" Margin="51,48,0,0" Name="lblDescription" VerticalAlignment="Top" Width="205" Foreground="White" />
+            </Grid>
+
+            <Grid Name="gridNotificationDetails" Margin="0,0,-41,0" Visibility="Visible" Opacity="1" HorizontalAlignment="Right" Width="0"  Background="#E5000000">
+                <Label Content="Referral Number: " Height="28" HorizontalAlignment="Left" Margin="27,28,0,0" Name="Label4" VerticalAlignment="Top" Foreground="White" FontSize="14" FontWeight="SemiBold" />
+                <GroupBox Header="Details" Margin="54,78,89,265" Name="GroupBox1">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="344*" />
+                            <ColumnDefinition Width="256*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Content="Name :" Height="28" HorizontalAlignment="Left" Margin="9,7,0,0" Name="Label6" VerticalAlignment="Top" Foreground="White" FontWeight="Medium" />
+                        <Label Content="Subject : " FontWeight="Medium" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="10,34,0,0" Name="Label8" VerticalAlignment="Top" />
+                        <Label Content="Section : " FontWeight="Medium" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="10,60,0,0" Name="Label9" VerticalAlignment="Top" />
+                        <GroupBox Header="Dates Absent" Height="100" HorizontalAlignment="Left" Margin="30,28,0,0" VerticalAlignment="Top" Width="200" Grid.Column="1">
+                            <Grid>
+                                <TextBlock Height="45" HorizontalAlignment="Left" Margin="4,9,0,0" Name="tbRefDates" Text="TextBlock" VerticalAlignment="Top" Width="178" Foreground="White" TextWrapping="Wrap" />
+                            </Grid>
+                        </GroupBox>
+                        <TextBlock Height="46" HorizontalAlignment="Left" Margin="9,101,0,0" Name="tbRefConcerns" Text="TextBlock" VerticalAlignment="Top" Foreground="White" FontWeight="Thin" FontSize="11" Width="277" TextWrapping="Wrap" />
+                        <Label Content="LastName, FirstName, MiddleName" FontWeight="Normal" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="54,8,0,0" Name="lblRefName" VerticalAlignment="Top" FontSize="11" />
+                        <Label Content="SubjectCode - Description" FontSize="11" FontWeight="Normal" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="67,35,0,0" Name="lblRefSubject" VerticalAlignment="Top" />
+                        <Label Content="Section Code" FontSize="11" FontWeight="Normal" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="70,62,0,0" Name="lblRefSection" VerticalAlignment="Top" />
+                    </Grid>
+                </GroupBox>
+                <StackPanel Height="219" Margin="55,289,0,0" Name="StackPanel6" VerticalAlignment="Top" HorizontalAlignment="Left" Width="559">
+                    <Expander Header="Action Taken" Height="Auto" Name="expNotifActionTaken" Foreground="White" ForceCursor="True">
+                        <Grid>
+                           <TextBlock Name="tbActionTaken" Margin="0,0,0,0" Height="110" TextWrapping="Wrap" Foreground="white"/>
+                        </Grid>
+                    </Expander>
+                    <Expander Header="Enter Your Feedback" Height="Auto" Name="expNotifFeedback" Foreground="White">
+                        <Grid Height="180">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="131*" />
+                                <RowDefinition Height="49*" />
+                            </Grid.RowDefinitions>
+                            <TextBox Name="tbFeedback" Height="130" Margin="-1,3,0,0" TextWrapping="Wrap" Controls:TextboxHelper.Watermark="Up to 200 Characters Only..." VerticalAlignment="Top" HorizontalAlignment="Left" Width="557" />
+                            <Button Content="Submit" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="381,9,0,0" Name="btnRefSubmit" VerticalAlignment="Top" Width="75" />
+                            <Button Content="Clear" Grid.Row="1" Height="23" Margin="466,9,0,0" Name="btnRefClear" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" />
+                            <Label Content="Character Counter : " Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="14,10,0,0" Name="Label10" VerticalAlignment="Top" Foreground="White" />
+                            <Label Content="200" Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="129,11,0,0" Name="lblRefFeedCtr" VerticalAlignment="Top" Foreground="White" />
+                        </Grid>
+                    </Expander>
+                </StackPanel>
+                <Label Content="0" FontSize="14" FontWeight="SemiBold" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="144,28,0,0" Name="lblRefRefNum" VerticalAlignment="Top" />
+            </Grid>
+            
+            <Grid Name="Clickable" Margin="208,0,0,0" Background="#00000000" Width="0" HorizontalAlignment="Left"></Grid>
+            <StackPanel Height="0" HorizontalAlignment="Left" Margin="712,0,0,0" Name="settings" VerticalAlignment="Top" Width="200" Background="#CC434345">
+                <Button Content="Change Password" Height="30" Name="btnChangePassword" Width="201" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" />
+                <Button Background="{x:Null}" BorderBrush="{x:Null}" Content="About" Foreground="White" Height="30" Name="btnAbout" Width="201" />
+                <Button Background="{x:Null}" BorderBrush="{x:Null}" Content="Help" Foreground="White" Height="30" Name="btnHelp" Width="201" />
+            </StackPanel>
+        </Grid>
+    </Controls:MetroContentControl>
+</Controls:MetroWindow>
